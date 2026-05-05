@@ -18,7 +18,7 @@ on:
         default: false
         required: false
   schedule:
-    - cron: '37 3 * * 0' #At 03:37 every Sunday
+    - cron: '37 3 1 * *' #At 03:37 on day 1, every month
 
 env:
   DOCKER_BUILDKIT: 1
