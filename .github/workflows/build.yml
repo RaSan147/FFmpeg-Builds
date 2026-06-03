@@ -133,7 +133,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win64,linux64]
+        target: [win64,linux64,linuxarm64]
     steps:
       - name: Free Disk-Space
         run: df -h && sudo apt-get clean && docker system prune -a -f && sudo rm -rf /opt/ghc /usr/local/.ghcup /usr/local/lib/android && df -h
@@ -189,8 +189,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win64,linux64]
-        variant: [gpl,lgpl,nonfree,nonfree-shared,nonfree 8.1,nonfree-shared 8.1]
+        target: [win64,linux64,linuxarm64]
+        variant: [nonfree,nonfree-shared,nonfree 8.1,nonfree-shared 8.1]
     steps:
       - name: Free Disk-Space
         run: df -h && sudo apt-get clean && docker system prune -a -f && sudo rm -rf /opt/ghc /usr/local/.ghcup /usr/local/lib/android && df -h
@@ -255,8 +255,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win64,linux64]
-        variant: [gpl,lgpl,nonfree,nonfree-shared,nonfree 8.1,nonfree-shared 8.1]
+        target: [win64,linux64,linuxarm64]
+        variant: [nonfree,nonfree-shared,nonfree 8.1,nonfree-shared 8.1]
     steps:
       - name: Free Disk-Space
         run: df -h && sudo apt-get clean && docker system prune -a -f && sudo rm -rf /opt/ghc /usr/local/.ghcup /usr/local/lib/android && df -h
